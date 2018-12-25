@@ -5,7 +5,7 @@ MRZHQIANG PERSONAL BLOG
 
 A simple, static portal which personal blogs, resource favorites, and some interesting things.
 
-Well, it looks a lot like [okhttp](https://github.com/square/okhttp) because it's copied from [okhttp](https://github.com/square/okhttp).
+Well, it looks a lot like [square.github.io](https://github.com/square/square.github.io) because it's copied from [square.github.io](https://github.com/square/square.github.io).
 
 
 Development

@@ -68,9 +68,15 @@ gem install jekyll bundler
 jekyll -v
 ```
 
-注意：这里不用 `sudo`。
+~~注意：这里不用 `sudo`。~~
+
+**如果这里不加上 `sudo`，那么你就只能修改 `/var/lib/gems/2.5.0` 文件夹的写入权限，或者使用 `root` 账号来操作。**
 
 有关更多内容，请参考：[Jekyll on Windows][5]。
+
+## 三、一步一步的教程
+
+参考：[一步一步的教程][8]。
 
 
 
@@ -81,3 +87,4 @@ jekyll -v
 [5]:https://jekyllrb.com/docs/installation/windows/
 [6]:https://msdn.microsoft.com/en-us/commandline/wsl/about
 [7]:https://www.brightbox.com/docs/ruby/ubuntu/
+[8]:https://jekyllrb.com/docs/step-by-step/01-setup/

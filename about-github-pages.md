@@ -6,7 +6,7 @@
 
 文档传送门：[GitHub Pages Basics][1]
 
-**个人认为：最省心的博客托管服务。**
+**个人总结：最省心的博客托管服务。**
 
 
 ## 一、简单步骤
@@ -35,10 +35,13 @@ GitHub 介绍：[About GitHub Pages and Jekyll][4]。
 
 官方文档：[Jekyll][5]。
 
+个人总结：[About Jekyll][6]
+
 
 
 [1]:https://help.github.com/en/categories/github-pages-basics
 [2]:https://github.com/join?source=header-home
 [3]:https://github.com/new
 [4]:https://help.github.com/en/articles/about-github-pages-and-jekyll
-[5]:https://jekyllrb.com/
+[5]:https://jekyllrb.com
+[6]:https://mrzhqiang.github.io

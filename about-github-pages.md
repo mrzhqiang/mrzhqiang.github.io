@@ -1,3 +1,9 @@
+---
+layout: default
+title: 关于 GitHub Pages
+---
+
+
 # GitHub Pages
 
 官方简介：

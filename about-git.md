@@ -1,3 +1,8 @@
+---
+layout: default
+title: 关于 Git
+---
+
 # Git
 
 官方简介：

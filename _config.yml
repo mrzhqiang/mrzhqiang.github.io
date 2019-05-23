@@ -1,1 +1,7 @@
-theme: jekyll-theme-cayman
+title: mrzhqiang 个人博客
+author: mrzhqiang
+email: qiang.zhang0314@gmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  路漫漫其修远兮，吾将上下而求索。
+
+show_excerpts: false # set to true to show excerpts on the homepage

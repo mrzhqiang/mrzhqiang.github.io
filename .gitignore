@@ -1,0 +1,15 @@
+### mrzhqiang template
+# IntelliJ project files
+.idea
+out
+gen
+
+### Jekyll template
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+### TortoiseGit template
+# Project-level settings
+/.tgitconfig

@@ -32,7 +32,7 @@ title: 关于 GitHub Pages
 4. 其他仓库想建立文档，则源文件可以在 `gh-pages` 分支下，也可以放进 `master` 分支的 `/docs` 文件夹中。
 5. `gh-pages` 分支下不能有“杂质”，也就是说，它只能包含站点源。
 6. 即使是私有仓库，一旦选择发布 GitHub Pages 站点，则始终可公开访问。
-7. 通过域名映射，将 `<username.github.io` 改为你自己的域名。
+7. 通过域名映射，将 `<username.github.io>` 改为你自己的域名。
 8. 站点源除常规 HTML 文件外，还支持 Jekyll 这个静态站点生成器。
 
 ## 三、Jekyll
@@ -50,4 +50,4 @@ GitHub 介绍：[About GitHub Pages and Jekyll][4]。
 [3]:https://github.com/new
 [4]:https://help.github.com/en/articles/about-github-pages-and-jekyll
 [5]:https://jekyllrb.com
-[6]:https://mrzhqiang.github.io
+[6]:https://mrzhqiang.github.io/about-jekyll

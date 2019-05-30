@@ -42,9 +42,7 @@ bundle exec jekyll serve
 ```
 
 运行成功后在浏览器中打开：
-```text
-http://localhost:4000
-```
+[http://localhost:4000](http://localhost:4000)
 
 ## 二、[WSL][6] 环境实战
 

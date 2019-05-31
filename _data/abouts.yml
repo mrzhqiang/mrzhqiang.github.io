@@ -1,0 +1,8 @@
+- name: 起源
+  link: /about/origin
+- name: 快速入门
+  link: /about/quickstart
+- name: 拿来主义
+  link: /about/copinism
+- name: 技术解剖
+  link: /about/dissect

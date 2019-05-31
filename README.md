@@ -3,13 +3,13 @@ mrzhqiang 的个人博客
 
 [![Build Status](https://travis-ci.org/mrzhqiang/mrzhqiang.github.io.svg?branch=master)](https://travis-ci.org/mrzhqiang/mrzhqiang.github.io)
 
-我的博客分为【探索笔记】、【技术文章】和【收藏夹】三大块。
+我的博客分为【笔记】、【窍门】和【收藏】三大块。
 
-- 探索笔记：在感兴趣的领域中疯狂探索，包括但不限于程序、视频、运动、旅游、书籍……
+- 笔记：对编程语言的入门放弃。
 
-- 技术文章：某一类语言或相关系统的技术性总结，唯一的原则就是【保持原创】。
+- 窍门：对编程工具的疯狂安利。
 
-- 收藏夹：资源链接、懒人脚本、代码模板、其他不可描述之物……
+- 收藏：对编程资源的归纳收集。
 
 
 关于纠错
@@ -30,7 +30,8 @@ $ bundle install # first time only
 $ bundle exec jekyll serve
 ```
 
-# 写在最后
+写在最后
+-----------
 感谢您在百忙之中抽出宝贵时间，如本仓库对您有些许的帮助，还请不吝赐予一颗 `Start`，再次感谢！
 
 

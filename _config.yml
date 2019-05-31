@@ -1,5 +1,5 @@
 # 基本信息
-title: 因循现喜 | 个人博客
+title: mrzhqiang·个人博客
 author: mrzhqiang
 email: qiang.zhang0314@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -31,6 +31,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-toc
 
+repo:     "https://github.com/mrzhqiang/mrzhqiang.github.io"
+jekyll:   "https://jekyllrb.com/"
+
 # 依赖
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
@@ -53,4 +56,4 @@ toc:
     - "bd-example"
 
 # 本地依赖
-bootstrap_path: "bootstrap-4.3.1-dis"
+bootstrap_path: "bootstrap-4.3.1-dist"

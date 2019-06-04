@@ -1,28 +1,20 @@
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row mr-navbar">
-  <a class="navbar-brand mr-0 mr-md-2" href="{{ site.baseurl }}/" aria-label="mrzhqiang">
-    {%- include icons/mrzhqiang.png width="48" height="48" class="d-block" -%}
+<header class="navbar navbar-expand navbar-dark sticky-top flex-column flex-md-row mr-navbar">
+  <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="mrzhqiang 个人博客">
+    {%- include icons/mrzhqiang.svg width="48" height="48" class="d-block" alt="Logo" -%}
   </a>
 
-  <div class="navbar-nav-scroll">
-    <ul class="navbar-nav mr-navbar-nav flex-row">
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/">主页</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "note" %}active{% endif %}" href="{{ site.baseurl }}/notes/">笔记</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "tip" %}active{% endif %}" href="{{ site.baseurl }}/tips/">窍门</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if page.layout == "favorite" %}active{% endif %}" href="{{ site.baseurl }}/favorites/">收藏</a>
-      </li>
-    </ul>
-  </div>
+  <ul class="navbar-nav flex-row">
+    {% for item in site.data.navbars %}
+    <li class="nav-item">
+      <a class="nav-link {% if page.url == item.link %}active{% endif %}" href="{{ item.link }}">{{
+        item.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item dropdown">
-      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="mr-versions"
+      <a class="nav-link dropdown-toggle mr-md-2" href="#" id="mr-versions"
          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         关于
       </a>

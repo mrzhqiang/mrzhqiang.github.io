@@ -1,42 +1,39 @@
 mrzhqiang 的个人博客
 ===================
+这是一枚小程序员的博客源码仓库。
 
-[![Build Status](https://travis-ci.org/mrzhqiang/mrzhqiang.github.io.svg?branch=master)](https://travis-ci.org/mrzhqiang/mrzhqiang.github.io)
+## 在线浏览
+传送门：[Web](https://mrzhqiang.github.io/)。
 
-我的博客分为【笔记本】、【技术栈】和【收藏夹】三大块。
+## 本地预览
+首先确保拥有以下环境：
 
-- 笔记本：对编程语言的入门放弃。
+- ruby 2.4.0 或者更高：`ruby -v`
+- gem 环境：`gem -v`
+- GCC 和 Make 环境：`gcc -v`, `g++ -v` 以及 `make -v`
 
-- 技术栈：对编程知识的疯狂安利。
+接着 clone 本仓库的 master 分支，进入仓库根目录，执行以下命令：
 
-- 收藏夹：对编程资源的归纳收集。
-
-
-关于纠错
------------
-### 前提条件
-- 在 master 分支上克隆或拉取此仓库的最新代码
-```bash
-git clone git@github.com:mrzhqiang/mrzhqiang.github.io.git
-```
-- 参考关于 [Jekyll docs][3] 的相关规则——如果您已熟悉这一条，请忽略它
-
-- 在出错的地方进行修改，随后提交一个 [Pull request][4] 即可
-
-### 本地预览
 ```bash
 $ gem install bundler # first time only
 $ bundle install # first time only
 $ bundle exec jekyll serve
 ```
 
+**注意：如果提示权限问题，请使用 sudo 作为 root 用户执行上面的命令。**
+
+**提示：如果出现下面的问题，请参考：https://blog.csdn.net/ls1160/article/details/38170463。**
+```bash
+An error occurred while installing nokogiri (1.10.3), and Bundler cannot continue.
+Make sure that `gem install nokogiri -v '1.10.3' --source 'https://rubygems.org/'` succeeds before bundling.
+```
+
+如果还有其他问题，请参考：[Jekyll Docs][1]。
+
 写在最后
 -----------
-感谢您在百忙之中抽出宝贵时间，如本仓库对您有些许的帮助，还请不吝赐予一颗 `Start`，再次感谢！
+作为程序员，要始终记得，遇到问题不用害怕，就怕遇不到问题！！
 
 
 
-[1]:https://github.com/pages-themes/cayman
-[2]:https://github.com/square/square.github.io
-[3]:https://jekyllrb.com/docs
-[4]:https://github.com/mrzhqiang/mrzhqiang.github.io/pulls
+[1]:https://jekyllrb.com/docs

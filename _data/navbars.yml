@@ -1,8 +1,6 @@
-- name: 主页
-  link: /
-- name: 笔记
+- name: 笔记本
   link: /notes
-- name: 窍门
-  link: /tips
-- name: 收藏
+- name: 技术栈
+  link: /stacks
+- name: 收藏夹
   link: /favorites

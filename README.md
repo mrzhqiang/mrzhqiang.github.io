@@ -3,13 +3,13 @@ mrzhqiang 的个人博客
 
 [![Build Status](https://travis-ci.org/mrzhqiang/mrzhqiang.github.io.svg?branch=master)](https://travis-ci.org/mrzhqiang/mrzhqiang.github.io)
 
-我的博客分为【笔记】、【窍门】和【收藏】三大块。
+我的博客分为【笔记本】、【技术栈】和【收藏夹】三大块。
 
-- 笔记：对编程语言的入门放弃。
+- 笔记本：对编程语言的入门放弃。
 
-- 窍门：对编程工具的疯狂安利。
+- 技术栈：对编程知识的疯狂安利。
 
-- 收藏：对编程资源的归纳收集。
+- 收藏夹：对编程资源的归纳收集。
 
 
 关于纠错

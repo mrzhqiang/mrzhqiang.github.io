@@ -4,30 +4,28 @@ author: mrzhqiang
 email: qiang.zhang0314@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   路漫漫其修远兮，吾将上下而求索。
-# social_image_path:
-# social_logo_path:
+
+# 显示摘要
+show_excerpts: false # set to true to show excerpts on the homepage
 
 # 永久链接
 permalink: pretty
 
 # 服务
 host: "localhost"
-encoding: UTF-8
-
-show_excerpts: false # set to true to show excerpts on the homepage
 
 # 插件
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
-  - jekyll-toc
 
-# 排除
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+# 单个页面的最大帖子数量
+paginnate: 10
+
+# 自动索引
+kramdown:
+  auto_ids: true
 
 # 工具：主要 GitHub Pages 流量有限（据说每个月 100Gb），使用 CDN 可以节省流量
 cdn:
@@ -38,24 +36,6 @@ cdn:
 # 仓库工具
 bootstrap_path: "bootstrap-4.3.1-dist"
 fontawesome_path: "fontawesome-free-5.8.2-web"
-
-# 单个页面的最大帖子数量
-paginnate: 10
-
-# 依赖
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  auto_ids: true
-
-# 页面索引设置
-toc:
-  min_level:        2
-  max_level:        4
-  no_toc_section_class:
-    - "bd-callout"
-    - "bd-example"
 
 # 全局变量
 repo:     "https://github.com/mrzhqiang/mrzhqiang.github.io"

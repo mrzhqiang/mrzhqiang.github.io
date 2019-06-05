@@ -60,3 +60,8 @@ toc:
 # 全局变量
 repo:     "https://github.com/mrzhqiang/mrzhqiang.github.io"
 jekyll:   "https://jekyllrb.com/"
+
+notes: "/notes"
+stacks: "/stacks"
+favorites: "/favorites"
+about: "/about"

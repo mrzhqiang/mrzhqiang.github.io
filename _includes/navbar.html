@@ -4,12 +4,12 @@
   </a>
 
   <ul class="navbar-nav flex-row">
-    {% for item in site.data.navbar %}
     <li class="nav-item">
-      <a class="nav-link {% if page.url == item.link %}active{% endif %}" href="{{ item.link }}">{{
-        item.name }}</a>
+      <a class="nav-link {% if page.layout == 'stack' %}active{% endif %}" href="/stacks">技术栈</a>
     </li>
-    {% endfor %}
+    <li class="nav-item">
+      <a class="nav-link {% if page.layout == 'favorites' %}active{% endif %}" href="/favorites">收藏夹</a>
+    </li>
   </ul>
 
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">

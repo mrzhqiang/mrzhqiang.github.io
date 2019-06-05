@@ -1,31 +1,36 @@
 # 基本信息
-title: 个人博客
-author: mrzhqiang
-email: qiang.zhang0314@gmail.com
+title: "个人博客"
+author: "mrzhqiang"
 description: > # this means to ignore newlines until "show_exerpts:"
   路漫漫其修远兮，吾将上下而求索。
-
-# 显示摘要
-show_excerpts: false # set to true to show excerpts on the homepage
-
 # 永久链接
 permalink: pretty
 
-# 服务
-host: "localhost"
+# 单个页面的最大帖子数量
+paginate: 5
+
+# 自动索引
+kramdown:
+  auto_ids: true
+
+# 本地预览时，局域网也可以用手机查看
+host: "0.0.0.0"
 
 # 插件
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-# 单个页面的最大帖子数量
-paginnate: 10
-
-# 自动索引
-kramdown:
-  auto_ids: true
+# 排除
+exclude:
+  - .idea
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 # 工具：主要 GitHub Pages 流量有限（据说每个月 100Gb），使用 CDN 可以节省流量
 cdn:

@@ -7,7 +7,40 @@ description: > # this means to ignore newlines until "show_exerpts:"
 # social_image_path:
 # social_logo_path:
 
+# 永久链接
+permalink: pretty
+
+# 服务
+host: "localhost"
+encoding: UTF-8
+
 show_excerpts: false # set to true to show excerpts on the homepage
+
+# 插件
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-toc
+
+# 排除
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# 工具：主要 GitHub Pages 流量有限（据说每个月 100Gb），使用 CDN 可以节省流量
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+
+# 仓库工具
+bootstrap_path: "bootstrap-4.3.1-dist"
+fontawesome_path: "fontawesome-free-5.8.2-web"
+
+# 单个页面的最大帖子数量
+paginnate: 10
 
 # 依赖
 markdown: kramdown
@@ -16,31 +49,7 @@ highlighter: rouge
 kramdown:
   auto_ids: true
 
-# 永久链接
-permalink: pretty
-
-# 服务
-host: "localhost"
-post: 8080
-baseurl: ""
-encoding: UTF-8
-
-# 插件
-plugins:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-  - jekyll-toc
-
-# 工具：主要 GitHub Pages 流量有限（据说每个月 100Gb），使用 CDN 可以节省流量
-cdn:
-  # See https://www.srihash.org for info on how to generate the hashes
-  jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-
-# 仓库工具：如果 CDN 挂掉了，那就加载仓库自带的工具
-bootstrap_path: "bootstrap-4.3.1-dist"
-fontawesome_path: "fontawesome-free-5.8.2-web"
-
+# 页面索引设置
 toc:
   min_level:        2
   max_level:        4

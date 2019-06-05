@@ -4,7 +4,7 @@
   </a>
 
   <ul class="navbar-nav flex-row">
-    {% for item in site.data.navbars %}
+    {% for item in site.data.navbar %}
     <li class="nav-item">
       <a class="nav-link {% if page.url == item.link %}active{% endif %}" href="{{ item.link }}">{{
         item.name }}</a>
@@ -19,7 +19,7 @@
         关于
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="mr-versions">
-        {% for item in site.data.abouts %}
+        {% for item in site.data.about %}
         <a class="dropdown-item {% if page.url == item.link %}active{% endif %}">{{ item.name }}</a>
         {% endfor %}
       </div>

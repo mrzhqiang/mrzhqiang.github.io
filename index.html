@@ -1,37 +1,49 @@
 ---
-layout: home
+layout: default
 title: mrzhqiang
 ---
 
-<div class="container-fluid">
-  <div class="posts">
-    {% for post in paginator.posts %}
-    <div class="post">
-      <h1 class="post-title">
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h1>
-      <span class="post-date">{{ post.date | data: "%Y-%m-%d" }}</span>
-      <p>{{ post.excerpt }}</p>
+<!-- http://www.w3school.com.cn/tags/tag_main.asp -->
+<!-- <main> 将主要内容的位置告诉给屏幕阅读设备和辅助设备 -->
+<main class="masthead" role="main">
+  <!-- https://code.z01.com/v4/layout/overview.html -->
+  <div class="container">
+    <!-- https://code.z01.com/v4/layout/grid.html -->
+    <div class="row align-items-center">
+      <div class="col-6 mx-auto col-md-6 order-md-2">
+        {%
+        include icons/mrzhqiang-web.svg width="512" height="512" class="img-fluid mb-3 mb-md-0"
+        %}
+      </div>
+      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h1 class="mb-5">{{ page.title }}</h1>
+        <p class="lead">
+          这是小程序员的技术博客，用来记录对编程的爱与恨。
+        </p>
+        <p class="lead mb-4">
+          博客是基于 Bootstrap 4.3.1 框架构建，使用 Jekyll 工具渲染网页，网站则托管在 GitHub Pages 服务上。
+        </p>
+        <div class="row mx-n2">
+          <div class="col-md px-2">
+            <a href="/notes" class="btn btn-sm btn-mr-primary mb-3">
+              <i class="fas fa-book mr-2"></i>
+              笔记本
+            </a>
+          </div>
+          <div class="col-md px-2">
+            <a href="/stacks" class="btn btn-sm btn-mr-primary mb-3">
+              <i class="fab fa-stack-overflow mr-2"></i>
+              技术栈
+            </a>
+          </div>
+          <div class="col-md px-2">
+            <a href="/favorites" class="btn btn-sm btn-mr-primary mb-3">
+              <i class="fas fa-folder-open mr-2"></i>
+              收藏夹
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    {% endfor %}
   </div>
-
-  <div class="pagination justify-content-center">
-    {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{ paginator.next_page }}/">旧时光</a>
-    {% else %}
-    <span class="pagination-item older">旧时光</span>
-    {% endif %}
-    {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-    <a class="pagination-item newer" href="/">新笔记</a>
-    {% else %}
-    <a class="pagination-item newer" href="/page{{ paginator.previous_page }}/">新笔记</a>
-    {% endif %}
-    {% else %}
-    <span class="pagination-item newer">新笔记</span>
-    {% endif %}
-  </div>
-</div>
+</main>

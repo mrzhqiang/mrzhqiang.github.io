@@ -1,0 +1,19 @@
+//
+// 桅顶，报头。
+// 作为博客起始页面的大标题布局。
+//
+.masthead {
+  // http://www.w3school.com.cn/cssref/pr_class_position.asp
+  position: relative;
+  // 1rem = 16px
+  // https://www.html.cn/book/css/values/length/rem.htm
+  padding: 2rem 1.25rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+  }
+}

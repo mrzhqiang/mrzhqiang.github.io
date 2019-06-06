@@ -1,0 +1,7 @@
+//
+// 变量样式
+//
+
+$primary-color: $cyan-700;
+$primary-color-light :  lighten(saturate($primary-color, 5%), 45%) !default;
+$link-color: $teal-700;

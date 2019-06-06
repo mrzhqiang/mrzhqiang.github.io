@@ -1,0 +1,16 @@
+.btn-mr-primary {
+  font-weight: 600;
+  color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($primary-color, .25);
+  }
+}

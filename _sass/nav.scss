@@ -1,18 +1,15 @@
 //
 // 导航栏样式
 //
-
-$cyan-700-light :  lighten(saturate($cyan-700, 5%), 45%) !default;
-
 .mr-navbar {
-  background-color: $cyan-700;
+  background-color: $primary-color;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
 
   .navbar-nav {
     .nav-link {
       padding-right: .5rem;
       padding-left: .5rem;
-      color: $cyan-700-light;
+      color: $primary-color-light;
 
       &.active,
       &:hover {

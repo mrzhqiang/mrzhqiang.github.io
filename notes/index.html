@@ -4,7 +4,7 @@ redirect_from:
   - /notes
 ---
 
-<div class="container">
+<div class="container note-list">
   <div class="posts">
     {% for post in paginator.posts %}
     <div class="post">
@@ -13,7 +13,7 @@ redirect_from:
           {{ post.title }}
         </a>
       </h1>
-      <span class="post-date">{{ post.date | data: "%Y-%m-%d" }}</span>
+      <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
       <p>{{ post.excerpt }}</p>
     </div>
     {% endfor %}
@@ -27,7 +27,6 @@ redirect_from:
     {% else %}
       <span class="pagination-item older"><i class="fas fa-arrow-circle-left fa-2x"></i></span>
     {% endif %}
-    <span class="px-3">{{ paginator.page }}</span>
     {% if paginator.previous_page %}
       {% if paginator.page == 2 %}
         <a class="pagination-item newer" href="/notes"><i class="fas fa-arrow-circle-right fa-2x"></i></a>

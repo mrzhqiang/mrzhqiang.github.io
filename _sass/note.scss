@@ -1,20 +1,120 @@
+.note-booticon {
+  display: inline-block;
 
-//
-// 桅顶，报头。
-// 作为博客起始页面的大标题布局。
-//
-.masthead {
-  // http://www.w3school.com.cn/cssref/pr_class_position.asp
+  i {
+    margin-bottom: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.note-list {
+  max-width: 40rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posts {
+}
+
+.post {
+  margin-bottom: 4em;
+}
+
+.post-title,
+.post-title a {
+  color: $primary-color;
+}
+.post-title {
+  margin-top: 0;
+}
+
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: $lime-700;
+}
+
+.post a {
+  word-break: break-word;
+}
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  text-align: center;
+}
+
+.pagination-item {
   position: relative;
-  // 1rem = 16px
-  // https://www.html.cn/book/css/values/length/rem.htm
-  padding: 2rem 1.25rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+a.pagination-item:hover {
+  z-index: 2;
+  color: $white;
+  text-decoration: none;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
 
-  h1 {
-    font-size: 4rem;
-  }
+span.pagination-item {
+  color: $gray-500;
+  border: 1px solid $gray-500;
+}
 
-  .btn {
-    padding: 0.8rem 2rem;
+@media (min-width: 30em) {
+  .pagination {
+    margin: 3rem 0;
   }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #767676;
+}
+.related-posts li a:hover {
+  color: #268bd2;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
 }

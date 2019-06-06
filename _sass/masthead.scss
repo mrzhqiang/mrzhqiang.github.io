@@ -1,0 +1,23 @@
+//
+// 桅顶，报头。
+//
+.masthead {
+  position: relative;
+  padding: 5rem 3rem;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  color: $primary-color;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-image: linear-gradient($gray-blue-200, $gray-blue-100);
+
+  a {
+    color: $primary-color
+  }
+
+  p {
+    max-width: 26rem;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+}

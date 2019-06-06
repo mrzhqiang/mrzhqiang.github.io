@@ -1,19 +1,35 @@
 //
-// 桅顶，报头。
-// 作为博客起始页面的大标题布局。
+// 主页样式
 //
-.masthead {
-  // http://www.w3school.com.cn/cssref/pr_class_position.asp
+.home {
   position: relative;
   // 1rem = 16px
   // https://www.html.cn/book/css/values/length/rem.htm
   padding: 2rem 1.25rem;
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .btn {
     padding: 0.8rem 2rem;
   }
+}
+
+// TODO: 未来加入以下分辨率的适应
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
 }

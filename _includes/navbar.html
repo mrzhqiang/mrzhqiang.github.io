@@ -5,6 +5,9 @@
 
   <ul class="navbar-nav flex-row">
     <li class="nav-item">
+      <a class="nav-link {% if page.layout == 'note' %}active{% endif %}" href="/notes">笔记本</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link {% if page.layout == 'stack' %}active{% endif %}" href="/stacks">技术栈</a>
     </li>
     <li class="nav-item">

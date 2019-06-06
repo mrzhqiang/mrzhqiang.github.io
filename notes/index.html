@@ -1,6 +1,7 @@
 ---
-layout: default
-title: mrzhqiang
+layout: note
+redirect_from:
+  - /notes
 ---
 
 <div class="container">
@@ -18,20 +19,25 @@ title: mrzhqiang
     {% endfor %}
   </div>
 
-  <div class="pagination justify-content-center">
+  <div class="pagination justify-content-center mb-5">
     {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{ paginator.next_page }}/">旧时光</a>
+      <a class="pagination-item older" href="/notes/page{{ paginator.next_page }}/">
+        <i class="fas fa-arrow-circle-left fa-2x"></i>
+      </a>
     {% else %}
-    <span class="pagination-item older">旧时光</span>
+      <span class="pagination-item older"><i class="fas fa-arrow-circle-left fa-2x"></i></span>
     {% endif %}
+    <span class="px-3">{{ paginator.page }}</span>
     {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-    <a class="pagination-item newer" href="/">新笔记</a>
+      {% if paginator.page == 2 %}
+        <a class="pagination-item newer" href="/notes"><i class="fas fa-arrow-circle-right fa-2x"></i></a>
+      {% else %}
+        <a class="pagination-item newer" href="/notes/page{{ paginator.previous_page }}/">
+          <i class="fas fa-arrow-circle-right fa-2x"></i>
+        </a>
+      {% endif %}
     {% else %}
-    <a class="pagination-item newer" href="/page{{ paginator.previous_page }}/">新笔记</a>
-    {% endif %}
-    {% else %}
-    <span class="pagination-item newer">新笔记</span>
+      <span class="pagination-item newer"><i class="fas fa-arrow-circle-right fa-2x"></i></span>
     {% endif %}
   </div>
 </div>

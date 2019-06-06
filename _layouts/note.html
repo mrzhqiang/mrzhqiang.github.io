@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
+
 {% include navbar.html %}
+
 <div class="masthead">
   <div class="container">
     <a class="note-booticon mb-3" href="/notes" aria-label="笔记本">
@@ -10,5 +12,9 @@ layout: default
     <p>旧时光里被遗忘的笔记本，上面落满了尘埃。</p>
   </div>
 </div>
-{{ content }}
+
+<main role="main">
+  {{ content }}
+</main>
+
 {% include footer.html %}

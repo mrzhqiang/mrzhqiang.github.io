@@ -5,16 +5,16 @@ title: 搭建 GitHub Pages 博客——1. 基础入门
 
 学习使用 GitHub Pages 搭建拥有自己风格的博客站点。
 
-- 基础入门：GitHub。
+- [x] 基础入门：GitHub。
 
-- 进阶知识：WSL/Linux、Git、GitHub Pages、Jekyll、Markdown。
+- [ ] 进阶知识：GitHub Pages、Jekyll。
 
-- 融会贯通：Html、CSS、JavaScript、SASS、JQuery、Bootstrap。
+- [ ] 融会贯通：Git、Markdown、Bootstrap。
 
 <!--more-->
 
 ## 基础入门
-最开始我只想写文章，不想了解技术细节，更不想学习一大堆东西，如果这一点不能办到的话，那我还是回归简书得了。
+一个好的项目，起步一定要简单，至少对于用户来说，不需要也不应该了解太多的细节。
 
 ### GitHub
 通过搜索网上的教程，我开始了萌新的第一步。
@@ -77,7 +77,7 @@ title: 搭建 GitHub Pages 博客——1. 基础入门
 
 ![](/assets/images/github-preview-first-post.png)
 
-大功告成！果然很简单！
+大功告成！
 
 ## 总结
 从现在开始，我们可以在 GitHub 上写博客，而且步骤非常简单。

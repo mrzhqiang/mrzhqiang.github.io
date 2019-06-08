@@ -13,10 +13,11 @@ paginate_path: "/notes/page:num/"
 # 摘要隔离变量
 excerpt_separator: "<!--more-->"
 
-# 自动索引
+# 文本格式
+markdown: kramdown
 kramdown:
-  auto_ids: true
-
+  input: GFM
+highlighter: rouge
 # 本地预览时，局域网也可以用手机查看
 host: "0.0.0.0"
 

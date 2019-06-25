@@ -4,10 +4,12 @@
 
 // 主色调，修改这里相当于改变整个主题的颜色
 $primary-color: $gray-blue-900;
-$primary-color-light :  lighten(saturate($primary-color, 5%), 45%) !default;
+$primary-color-light: lighten(saturate($primary-color, 5%), 45%) !default;
 
 // 底部签名的链接
-$link-color: $teal-300;
+$link-color: $teal-300 !default;
+
+$body-bg-color: $gray-blue-50 !default;
 
 // Headers
 $header-heading-color: $white !default;

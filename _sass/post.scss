@@ -1,3 +1,8 @@
+body {
+  color: $body-text-color;
+  background-color: $body-bg-color;
+}
+
 .post-header-icon {
   display: inline-block;
 
@@ -77,6 +82,11 @@
 
 .related-title {
   color: $body-text-color;
+}
+
+img {
+  margin-left: 2rem;
+  max-width: 75%;
 }
 
 .post-main {

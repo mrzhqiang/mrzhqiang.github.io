@@ -19,7 +19,7 @@ title: 搭建 GitHub Pages 博客——2. 进阶知识
 ### GitHub Pages
 首先从仓库的设置页面里看到，它是基于 GitHub Pages 服务。
 
-![](/assets/images/github-pages-learn-more.png)
+![](/assets/images/github-pages/pages-learn-more.png)
 
 点击 [学习更多][1] 按钮，了解到以下要点：
 

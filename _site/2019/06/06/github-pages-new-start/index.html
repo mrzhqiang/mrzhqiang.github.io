@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="uft-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta name="description" content="路漫漫其修远兮，吾将上下而求索。"/>
+<meta name="author" content="mrzhqiang"/>
+<meta name="generator" content="Jekyll v3.8.5"/>
+
+<title>【搭建 GitHub Pages 博客】一、新手起步 | 个人博客</title>
+
+
+<link href="/assets/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/fontawesome-free-5.8.2-web/css/all.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
+
+<link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="个人博客" />
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>【搭建 GitHub Pages 博客】一、新手起步 | 个人博客</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="【搭建 GitHub Pages 博客】一、新手起步" />
+<meta name="author" content="mrzhqiang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="本文是搭建 GitHub Pages 博客三步骤的第一步，通过阅读你能了解到： 创建 GitHub 账号； 创建 GitHub Pages 仓库； 选择博客主题； 在线编写博客文章。 ——意尽而知其然，思深则所以然。" />
+<meta property="og:description" content="本文是搭建 GitHub Pages 博客三步骤的第一步，通过阅读你能了解到： 创建 GitHub 账号； 创建 GitHub Pages 仓库； 选择博客主题； 在线编写博客文章。 ——意尽而知其然，思深则所以然。" />
+<link rel="canonical" href="http://0.0.0.0:4000/2019/06/06/github-pages-new-start/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2019/06/06/github-pages-new-start/" />
+<meta property="og:site_name" content="个人博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-06T00:00:00+08:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2019/06/06/github-pages-new-start/"},"@type":"BlogPosting","dateModified":"2019-06-06T00:00:00+08:00","url":"http://0.0.0.0:4000/2019/06/06/github-pages-new-start/","author":{"@type":"Person","name":"mrzhqiang"},"headline":"【搭建 GitHub Pages 博客】一、新手起步","description":"本文是搭建 GitHub Pages 博客三步骤的第一步，通过阅读你能了解到： 创建 GitHub 账号； 创建 GitHub Pages 仓库； 选择博客主题； 在线编写博客文章。 ——意尽而知其然，思深则所以然。","datePublished":"2019-06-06T00:00:00+08:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+<header class="navbar navbar-expand navbar-dark sticky-top flex-column flex-md-row mr-navbar">
+  <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="mrzhqiang 个人博客"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">  <image id="image0" width="48" height="48" x="0" y="0"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
+B3RJTUUH4wYEEyg1SajW2wAADUVJREFUaN7FmntwXPV1xz/nd+/u6rHSSraM9bCw44dsS35hEUwg
+iW1KoKEznXRaUZKSaaeT2MBMIZDOZPpIpW3ppDMJhdApxU6ZdDo8pVAoDaEppRbJ4GBsYRRbYFuy
+JcuWJVuyXiuttHvv/Z3+sZIsyfID7Jgzc2d29v7uPd/vOed3fud3fldUlSsRAaGhwVQPDJimwkKr
+NTXBRcc3NDiTY6mpsQpXBEA+KQGJx82WzZhdW2r92ffWNDwVtSk3z6rJAjBix03ETxyseWBk9tit
+jXG38W2s1tbaa0JgLuCrX/pRRWDlVoNuQnWVVSkTbL6KCWeU2LRiho1oFyKHLLLHMfrOR3/4zSNX
+SuRjEbhx587Qvm3bvEkre0Ho99TqvSLcghL9eJZgRJXdYuTZLC/rP5q//vXR2TquGoHJONeamkBA
+Vrz4o+2i+jBKxbRhqvbyrCFGJPPaKQVHVOTx1nu+uUNBtzbG3cYttcHlzI9LEpCGBmdyYla8uHOT
+KD9E2ZRBjBWxVtUYEczHccCcz4ruUZGHjtyzbc9s3Z+IwPQXrHrhX79lVX8gqKOKVVAjOB8H9IXE
+KoGAiGAUCYzqnx/6o21PXA6JCxKYYfnndz4lcP+EOh+Mw/QQuDqiYAMwLoBadhy5d9t9lyIxp9sl
+HjfTwD8ncL8qVq3aCQVXGzyZdxpXrVpVrBi2V/z708+LiGhNTSANDXN6+zwPCMjk5Kl4bse/iMh9
+atUiwseN80/sCsWiihgxQSq98+if/tl9qqrTsV3QA1sa407G8jseEpH7VLmm4IGMLhEAa0Khbcuf
+efzh6dhmjJ3ugckcvPL5p29SnN2COmrVipFrBn66TOrWwAY2MfTFtge+s3v2OjEFTOJxM3lDrTwp
+qAPW/7TAA2R0W18c4xDOfkJEzL5t2zyJx6cwTf3Ysjnzu+LZp7eLkU2q2Ils8ymLcQBrssKf/cw/
+f/+B6VinCEg8bnZtqfXLfrozR5BHABTUdYzkZWcRdt1PrD6Wm0N2OHzB+2HXxTEZPK7jEAm5ZBbq
+c46wiooxOJHwg/PjD+bv2lLrT3rBncbI5vR5v084VKGKDbuO84XVK1i9qJTuwSHe+vWHDCfHAIhm
+RRhLewT24nVXQW4Of3zb5+kbTvC/zR9yenDovDGVi0qJRXPw/ICFBflkhVwOdZ3mg/bjTM7PiQXT
+Sji0IlZQUgM8M4nZFRCdqCzFmHsBHKP2s8s/Y1aUFpNMp1m9qIT5ebm8umc/fcMJfmtdJW09vbR0
+nrwg+JDj8IXVFWSHQrSeOsN4Oj11LysUYlHRPCpKF1JVXoZjDAOjowwnx7HWsnFpOcNjY7T3nOFc
+eWWtOI4xWZGvisiPVdUXEJeGBkNNTbBsx5Mr3LzILQCF0TxTlB/lJ7v3Mu55VJUv4vb1ldy2dhU/
+3dfMglgeH53sviB4EWHlolIqry/jcNcpPmjvIO0HhByHxdcVcXPFMooL8wmsxSq8sa+Zk2f7GRlP
+oaoURnP5g1tu5JWx8SmvqRojRjDh8Kbrv/ud1UALDQ3GrR4YMEBgQvpFkCig42nP/N+BjxgdTwGw
+72g7InDb2tXcsWENIceldzhxQQJl8wv50vpKskIue9oy4HMiYW5fX0VVeRndA4P8fH8LpweHuGND
+Fe2nexlNpaae94OAgpwccrMi04yCARTXiUosdzPQUj0wYDJbu0z83AygVnU0lZoCn2GvvH/sOIdP
+dbNuSTmn+gem5sNsycvOYnNlBWHX5VT/ID39g+RGInxl00YqSot5++BhXvzlHg4cP8H8vCi9wwnG
+vHPhFXIcbq5YxsDoKAMjozPerYFVMQYTCd0kItJUWGgzNb6IiDGrLjYh/SBgb1sHKc/DdcxU5pgd
+9zetWErv8Ahp3+dQVzdWldysCIsXFPGrw22813qUcc8jEgqxrHgB7afPYu3kZBVWLSpl3ZJy9rZ2
+MDianCs+MW6oAnC0piYwAAvqHshFpJhLiGMMgrCitJjS+YXn3a8sLyM3Eqazt5/AWo73ngVgODnG
+8TN9dPb1409krq1rVrFm8SLOJhJcF8vnulg+n1+9gjtvqKK5vZPmjk4uWOobZ2Hsa7+TBxPrQMQt
+jGGcvIuBF2B1WTHNHZ0IQvXS6zHmXL6enxdlZVkxe1rbKcrPJeV5nE1k9vDjnse7rcdYGMufGt89
+MIRjDJ9buZyyeYXcvq6SyvIy9ra209hy+OIp2nWi2fnlMZhYB0QlS9DwxarkWG4O1xXE+O/3DxB2
+XZaXLGRhLEb3wCCu4/C5lcs53NVD33CCW1ctZ3A0STJ1LrbbT/cyMHKuKbGoqJCWzi7WXF9G19kB
+/nPvflzjkBgb41I7UxHCxnWzpjygqZS5+APC+iXl9AwMcmZomKZjx1FgzeIyjAgrS0sIuw4fnuzC
+GKFkXgGn+gdnhICqMjCSiemC3ByK8qO881Er7xxqZfOalRQXFjCUTF4S/KRYTTlTBKyXTqnVC3YC
+olkRVpaVcKCzC4CegSFO9Q+wqqyEhYUx1i0p490jx/D8gKxQiIKcHBJjKSKh0HnvcoxheUkx/Ykk
+/SOj7Gtrp7t/kDs3rKEgN+eywBOoZ730+BSB0YNtCbDDF7L+DUsXc3pwiL6hTO73g4CDx7uYF83l
+tzes4czQMKf6BwAojEZxjKF8fiHz8mZ2WlzHsHHpYtYuLuPQyW4CaxlLe7x14COstdxVvY687KxL
+4tfATyQPtiamCAy9/npS0/b0XOBXlBRTvWwx4543Yyt08mw/g6NJsiNhPmg/MfV/cUE+YoSCaA59
+QzNtEsvJ4aaKpYQch5P9/VP/9w0neHXP+5QUxLiret2MBWzO8PHSvSO7d48AmK2NcRcIrJ9une3q
+jUuXcFf1WhxjCDkOIedcdW1VsaqkfZ+U708DmY2QyTJeMHMfXlxYQCwnm8Nd3aTSMyO2Z3CI/2n+
+kNJ5hXxpfRXZ4fPDL2N+xY6l2gBva2PcdRNHSgTwg+FEk5uf9ycTTSd1HSPLSxaQGBvn9X3N9Myq
+JP0gYGQsxemhIdLeOQKHurpZvGA+HWf65lAOg6NJDnZ2zTlZD3aewDGGL29ciyPCm9MqYEDFMaKe
+jz84tB/wE0dKXKG+3tGamqDs/m/ckHtrdaMYJz/TdMJEQplafXo6nC4FuTmMpdOkvJn93axwCM8P
+zsvljjFkh0OMjqcu2HJzjGHt4nLu2FDJUHKMdw8fI+S6HO3usQPJMRMkk4mRN39xR8+LL78r8bgr
+qIqCikh02Y7HXnOi0a0TvZ9Pvou5QhERqpctYeuaVWRHwhw4fpKf7dvvp3zrpnvO/KLj29/9XVUd
+EhAz2YsExr2uM6+gysQ27soODq5AVJV9be28+M57vNX8IW80/VpTgTrq+3inul8DRrc2xl0FNQCN
+b2NV1e997ievBuOpVjLbuE/Ur7+acqL3LO8caiWZ9iyqEiRG2s6+/LOXVdVvfDuDL7MS19barY1x
+d+zo0d708c5/U6uYTDfiU/PCNFFjxKjvM37s+LPjHR09Wxvj7uQ5wlQJMeGF8RN/99iPg+FEE6qS
+6VV+2mIDVMXr699/6h+fekZVxxufapky7BSBSS8A/SO/2vuoptNpMK5VPjUS1mqAOK5NJtPD773/
+PaD3xp3bQ1pfP4VpRhG3a0utv2VXXXDm2frG5KEjP1A/wBgxqnrN54OqWuMYo6k0yZbDT/S/9Mqb
+W3bVBfu27ZixAs7Z3OXuuw0NDQvL//Yvvp+1pPxr4rpWrUXk2nTpVNWKMajnm2Tr0Ze6Hn3sEWpq
+TlNfby/Z3FVQqqoU6D3xN9/7a+9E13+p5xsxxlirv/FwslYDMcao55tUR+frXY8+9pdA7xS2WTKn
+RbW21lJfb4FTHX/19w+PH+t4QdMexjEOWF/16menzDutbxzjaCpNsvXoS521//AtoIu6Op0e99Pl
+4kdM8bhLXZ0DlCx65L77s1avesjkZEcQUTQIVI0jcmWHHaqoiA0Qx0FV7GgyNd5y6MmTP9zxFNBN
+XV2gteefRV8WgQkShoYGl5aWoqKv3LU57/M3f9stml8tIZdzRMSIzDp5vBRuVRVROwlcPR+/t68p
+8ct3H+977Y1dVFX1UVkZXMjyl02ADCqpit8daqlryAWKSx78xlezly27x8nPWyHhEEw2Y6295I5Q
+BDATPRlVNO0RDCdax9raXur+p2deALqr6mpGW2rrvatyzDpdbty5PdS0facBCkMFOSVFd9/95dDS
+xXeGCmPrTSQSw3GQyU6FzHLGhB61mbM8O54e8gYHm72jx3/eV1//hjeY7AYGqndss7NT5VUjMOmN
+6p3b3abtO10gHyjIv6V6ec6G9RvDC4qqTDS6xGRH5ovrRsVxQgAaBJ4G/ogdS521iZGOdG9fS/KD
+5veHdzcdBQaA4eod2/ym7tLgN/qpwYwHJ76ZaNxaJ0D29CsUi+U4JSVRJ5YbAQiGRlNBd/eINzSU
+BMamX1t21ek1/dhjLo8QjztVYKCFlroGJdNvMpxL03bi8qvqaiSr5HZt6u5Wai/vc4KLyf8Dy2q0
+wLIlAhYAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDYtMDRUMTE6NDA6NTMrMDg6MDDRAy38AAAA
+JXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA2LTA0VDExOjQwOjUzKzA4OjAwoF6VQAAAAABJRU5ErkJg
+gg==" />
+</svg>
+</a>
+
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item">
+      <a class="nav-link " href="/notes">
+        <i class="fas fa-book mr-2"></i>笔记本
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="/stacks">
+        <i class="fab fa-stack-overflow mr-2"></i>技术栈
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="/favorites">
+        <i class="fas fa-folder-open mr-2"></i>收藏夹
+      </a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle mr-md-2" href="#" id="mr-versions"
+         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        关于
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="mr-versions">
+        
+        <a class="dropdown-item" href="/about/author">关于作者</a>
+        
+        <a class="dropdown-item" href="/about/blog">关于博客</a>
+        
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link p-2" href="https://github.com/mrzhqiang/mrzhqiang.github.io" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+
+<div class="masthead">
+  <div class="container">
+    <a class="post-header-icon mb-3" href="/notes" aria-label="笔记本">
+      <i class="fas fa-book-open fa-5x"></i>
+    </a>
+    <h1 class="post-title">【搭建 GitHub Pages 博客】一、新手起步</h1>
+    <span class="post-date">2019-06-06 - mrzhqiang</span>
+  </div>
+</div>
+
+<main class="container limited-content post-main" role="main">
+  <p>本文是搭建 GitHub Pages 博客三步骤的第一步，通过阅读你能了解到：</p>
+
+<ol>
+  <li>创建 GitHub 账号；</li>
+  <li>创建 GitHub Pages 仓库；</li>
+  <li>选择博客主题；</li>
+  <li>在线编写博客文章。</li>
+</ol>
+
+<p>——意尽而知其然，思深则所以然。</p>
+
+<!--more-->
+
+<h1 id="新手起步">新手起步</h1>
+<p>GitHub Pages 是一种静态网站托管服务，内置 Jekyll 渲染工具，不论是 HTML 资源还是 Markdown 文本，都可以渲染为网站。</p>
+
+<h2 id="一创建-github-账号">一、创建 GitHub 账号</h2>
+<p>GitHub 官方简介：</p>
+<blockquote>
+  <p>The best way to design, build, and ship software.</p>
+</blockquote>
+
+<p>想要使用 GitHub Pages 服务，首先你得创建一个 GitHub 账号：<a href="https://github.com/join?source=header-home">注册传送门</a>。</p>
+
+<p>这是 2019 年 06 月的注册页面：</p>
+
+<p><img src="/assets/images/github-pages/craete-account.png" alt="" /></p>
+
+<p>名词释义：</p>
+<ul>
+  <li><code class="highlighter-rouge">Username</code>：用户名，账号，建议全小写字母，可以使用数字后缀，比如拼音加年份：randall2019。</li>
+  <li><code class="highlighter-rouge">Email address</code>：邮件地址，建议常用邮箱，一些账户相关的操作会通知到邮箱，保证安全。</li>
+  <li><code class="highlighter-rouge">Password</code>：密码，口令，建议大小写字母加数字、特殊字符的组合，Chrome 浏览器可以自动生成并保存密码，推荐使用。</li>
+</ul>
+
+<p>点击创建账号按钮，可能会触发机器验证：</p>
+
+<p><img src="/assets/images/github-pages/verify-account.png" alt="" /></p>
+
+<p>通过验证之后，出现两个订阅选项：</p>
+
+<p><img src="/assets/images/github-pages/choose-subscription.png" alt="" /></p>
+
+<p>订阅释义：</p>
+<ul>
+  <li>免费：无限制的开源或私有仓库，最多三人协作的私有仓库，问题和 bug 跟踪系统，工程管理。</li>
+  <li>专业：享受免费订阅所有功能，包括无限协作的私有仓库，以及高级工具和高级洞察系统。</li>
+</ul>
+
+<p>这里我们选择免费订阅，然后继续：</p>
+
+<p><img src="/assets/images/github-pages/continue-account.png" alt="" /></p>
+
+<p>选项释义：</p>
+<ul>
+  <li><code class="highlighter-rouge">Help me set up an organization next</code>：帮助建立组织，这个对于个人来说，没有勾选的必要。</li>
+  <li><code class="highlighter-rouge">Send me updates on GitHub news, offers, and events</code>：发送最新的 GitHub 新闻、优惠、活动，跟随默认呢就好。</li>
+</ul>
+
+<p>点击继续按钮，出来一堆选项：</p>
+
+<p><img src="/assets/images/github-pages/tailor-experience.png" alt="" /></p>
+
+<p>选项释义：</p>
+<ul>
+  <li><code class="highlighter-rouge">What is your level of programming experience?</code>：询问编程水平。按从上到下的顺序，分别是：
+    <ul>
+      <li>无</li>
+      <li>新手</li>
+      <li>熟练</li>
+      <li>精通</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">What do you plan to use GitHub for? (Select up to 3)</code>：询问使用方式，最多选三个答案。按从上到下的顺序，分别是：
+    <ul>
+      <li>学习代码</li>
+      <li>学习 Git 和 GitHub</li>
+      <li>托管项目（仓库）</li>
+      <li>用 GitHub Pages 创建网站</li>
+      <li>团队合作</li>
+      <li>寻找合适项目</li>
+      <li>学校工作和项目</li>
+      <li>GitHub API</li>
+      <li>不知道</li>
+      <li>其他（请注明）</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">What are you interested in?</code>：询问兴趣爱好，需要用英文填写。</li>
+</ul>
+
+<p>一般来说，我们只需要点击旁边那个 <code class="highlighter-rouge">skip this step</code> 按钮，当然，你也可以选择填写这份问卷调查，反正闲着也是闲着。</p>
+
+<p>提示验证邮箱地址：</p>
+
+<p><img src="/assets/images/github-pages/hint-verify-email.png" alt="" /></p>
+
+<p>注意，如果填错邮箱，这没关系，我们到账户设置中添加新邮箱：</p>
+
+<p><img src="/assets/images/github-pages/add-email.png" alt="" /></p>
+
+<p>随后到邮箱中查收邮件并进行验证，至此你完成了创建账号的所有步骤：</p>
+
+<p><img src="/assets/images/github-pages/finish-account.png" alt="" /></p>
+
+<h2 id="二创建-github-pages-仓库">二、创建 GitHub Pages 仓库</h2>
+<p>仓库是对项目的有效管理，依托于 Git 工具的强大，你的项目可以很好地保存在 GitHub 上。</p>
+
+<p>先放下诸多疑问，咱们来创建一个全新的仓库：</p>
+
+<p><img src="/assets/images/github-pages/new-repositories.png" alt="" /></p>
+
+<ul>
+  <li>2.2 通常我们将仓库命名为 <code class="highlighter-rouge">username.github.io</code>，这是作为博客仓库使用。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/create-blog.png" alt="" /></p>
+
+<p><em>提示：如果需要其他命名方式，那么这一节可能不适合你阅读。</em></p>
+
+<h3 id="步骤三选择主题可选">步骤三：选择主题（可选）</h3>
+<ul>
+  <li>3.1 要为博客选择一个主题，请先找到仓库的设置选项。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/find-setting.png" alt="" /></p>
+
+<ul>
+  <li>3.2 随后找到设置中的 GitHub Pages 项目，点击选择主题按钮。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/find-choose-theme.png" alt="" /></p>
+
+<ul>
+  <li>3.3 这里第一个就很好看，那就是它了。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/choose-the-theme.png" alt="" /></p>
+
+<ul>
+  <li>3.4 主题被替换后，README.md 文件自动更新。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/set-theme-cayman.png" alt="" /></p>
+
+<ul>
+  <li>3.5 我们提交这一次的更新。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/update-readme-for-theme-change.png" alt="" /></p>
+
+<ul>
+  <li>3.6 过一小会儿，可以从 <code class="highlighter-rouge">username.github.io</code> 上面看到我们的博客。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/my-first-blog.png" alt="" /></p>
+
+<h3 id="步骤四写文章">步骤四：写文章</h3>
+<p>现在，我们忽略所有的规则，从最简单的地方开始写文章。</p>
+
+<ul>
+  <li>4.1 创建一个新的文件。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/create-new-file.png" alt="" /></p>
+
+<ul>
+  <li>4.2 文件作为 <code class="highlighter-rouge">.md</code> 格式，随意写入内容。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/input-first-post.png" alt="" /></p>
+
+<ul>
+  <li>4.3 提交这个新文件到仓库。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/commit-first-post.png" alt="" /></p>
+
+<ul>
+  <li>4.4 在浏览器中输入 <code class="highlighter-rouge">username.github.io/001.天气不错</code> 查看第一篇文章。</li>
+</ul>
+
+<p><img src="/assets/images/github-pages/preview-first-post.png" alt="" /></p>
+
+<p>大功告成！</p>
+
+<h1 id="总结">总结</h1>
+<p>从现在开始，我们可以在 GitHub 上写博客，而且步骤非常简单。</p>
+
+
+</main>
+
+<div class="container related limited-content">
+  <h2>相关帖子</h2>
+  <ul class="related-posts"><li>
+      <h3>
+        <a class="related-title" href="/2019/06/07/set-up-github-pages-blog-2/">
+          搭建 GitHub Pages 博客——2. 进阶知识
+          <small>2019-06-07</small>
+        </a>
+      </h3>
+    </li><li>
+      <h3>
+        <a class="related-title" href="/2019/05/30/fist-blog/">
+          第一篇博客
+          <small>2019-05-30</small>
+        </a>
+      </h3>
+    </li></ul>
+</div>
+
+<footer class="mr-footer text-muted">
+  <div class="container-fluid p-3 p-md-5">
+    <ul class="mr-footer-links">
+      <li><a href="https://github.com/mrzhqiang/mrzhqiang.github.io">GitHub</a></li>
+      <li><a href="/about/overview/">关于</a></li>
+    </ul>
+    <p class="mb-3">震撼心灵之至者有二：璀璨星空，崇高道德。</p>
+    <p>This page was generated by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write(`<script src="/assets/js/jquery-slim.min.js" type="text/javascript"><\/script>`)</script><script src="/assets/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" type="text/javascript"></script>
+</body>
+</html>

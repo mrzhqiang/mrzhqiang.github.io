@@ -2,6 +2,36 @@
 // 变量样式
 //
 
-$primary-color: $cyan-700;
+// 主色调，修改这里相当于改变整个主题的颜色
+$primary-color: $gray-blue-900;
 $primary-color-light :  lighten(saturate($primary-color, 5%), 45%) !default;
-$link-color: $teal-700;
+
+// 底部签名的链接
+$link-color: $teal-300;
+
+// Headers
+$header-heading-color: $white !default;
+$header-bg-color: $green-600 !default;
+$header-bg-color-secondary: $blue-800 !default;
+
+// Title
+$title-text-color: $primary-color !default;
+$title-link-color: $primary-color-light !default;
+
+// Date
+$date-text-color: $lime-600 !default;
+
+// Text
+$section-headings-color: $teal-400 !default;
+$body-text-color: $gray-700 !default;
+$body-link-color: $blue-light-700 !default;
+$blockquote-text-color: $gray-blue-400 !default;
+
+// Code
+$code-bg-color: $white !default;
+$code-text-color: $gray-600 !default;
+
+// Borders
+$border-color: $brown-100 !default;
+$table-border-color: $gray-blue-50 !default;
+$hr-border-color: $brown-50 !default;

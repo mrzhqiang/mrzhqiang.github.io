@@ -5,13 +5,19 @@
 
   <ul class="navbar-nav flex-row">
     <li class="nav-item">
-      <a class="nav-link {% if page.layout == 'note' %}active{% endif %}" href="/notes">笔记本</a>
+      <a class="nav-link {% if page.layout == 'note' %}active{% endif %}" href="/notes">
+        <i class="fas fa-book mr-2"></i>笔记本
+      </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link {% if page.layout == 'stack' %}active{% endif %}" href="/stacks">技术栈</a>
+      <a class="nav-link {% if page.layout == 'stack' %}active{% endif %}" href="/stacks">
+        <i class="fab fa-stack-overflow mr-2"></i>技术栈
+      </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link {% if page.layout == 'favorites' %}active{% endif %}" href="/favorites">收藏夹</a>
+      <a class="nav-link {% if page.layout == 'favorites' %}active{% endif %}" href="/favorites">
+        <i class="fas fa-folder-open mr-2"></i>收藏夹
+      </a>
     </li>
   </ul>
 

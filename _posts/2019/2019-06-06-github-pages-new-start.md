@@ -1,11 +1,10 @@
 ---
 layout: post
-title: 【搭建 GitHub Pages 博客】一、新手起步
+title: 搭建 GitHub Pages 博客：一、新手入门
 ---
 
-本文是搭建 GitHub Pages 博客三步骤的第一步，通过阅读你能了解到：
-
-1. 创建 GitHub 账号；
+通过阅读你能了解到：
+1. 注册 GitHub 账号；
 2. 创建 GitHub 仓库；
 3. 通过 GitHub Pages 选择主题；
 4. 在线写文章。
@@ -18,11 +17,11 @@ title: 【搭建 GitHub Pages 博客】一、新手起步
 GitHub Pages 是一种静态网站托管服务，内置 Jekyll 渲染工具，不论是 HTML 资源还是 Markdown 文本，都可以渲染为网站。
 
 
-## 一、创建 GitHub 账号
+## 1. 注册 GitHub 账号
 GitHub 官方简介：
 > The best way to design, build, and ship software.
 
-想要使用 GitHub Pages 服务，首先你得创建一个 GitHub 账号：[注册传送门][1]。
+想要使用 GitHub Pages 服务，首先你得注册一个 GitHub 账号：[注册传送门][1]。
 
 这是 2019 年 06 月的注册页面：
 
@@ -90,9 +89,10 @@ GitHub 官方简介：
 
 ![](/assets/images/github-pages/finish-account.png)
 
-至此，完成账号的创建。
+至此，完成账号的注册。
 
-## 二、创建 GitHub 仓库
+
+## 2. 创建 GitHub 仓库
 仓库是项目的存储库，依托于 Git 工具的强大，项目可以很好地保存在 GitHub 上，即使服务在未来不可用，只要你本地拥有项目副本，那么通过 Git 命令可以将项目转移到 [Gitee][2] 上。
 
 先放下关于 Git 的诸多疑问，咱们来创建一个全新的仓库：
@@ -117,7 +117,7 @@ GitHub 官方简介：
 填写完毕后，点击创建仓库按钮，至此完成仓库的创建。
 
 
-## 三、通过 GitHub Pages 选择主题
+## 3. 通过 GitHub Pages 选择主题
 选择主题并非本文的核心，所以你也可以**跳过这一节的内容**。
 
 找到仓库设置：
@@ -146,7 +146,8 @@ GitHub 官方简介：
 
 主题对于网站的帮助是巨大的，否则你看到的将只是一段段简单的纯文本，甚至它们可能像 txt 一样难以驾驭。
 
-## 四、在线写文章
+
+## 4. 在线写文章
 这个网站首页由 Jekyll 读取 `README.md` 文件渲染生成，对于 Markdown 文件的疑惑先放到一边，我们来试试在线写文章。
 
 点击 `Create new file` 按钮创建一个文件：
@@ -166,6 +167,7 @@ GitHub 官方简介：
 ![](/assets/images/github-pages/preview-first-post.png)
 
 至此，大功告成！
+
 
 # 总结
 GitHub 提供的 GitHub Pages 服务非常方便，仅仅在浏览器中就可以创建和更新自己的博客，真是太棒了！

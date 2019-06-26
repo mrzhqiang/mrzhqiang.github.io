@@ -40,8 +40,8 @@ exclude:
 # 工具：主要 GitHub Pages 流量有限（据说每个月 100Gb），使用 CDN 可以节省流量
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  jquery:           "https://code.jquery.com/jquery-3.3.1.min.js"
+  jquery_hash:      "sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
   js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"

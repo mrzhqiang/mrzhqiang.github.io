@@ -1,4 +1,12 @@
-- name: 关于作者
-  link: /about/author
-- name: 关于博客
+- name: GitHub Pages
+  link: /about/github-pages
+- name: Jekyll
+  link: /about/jekyll
+- name: Markdown
+  link: /about/markdown
+- name: Git
+  link: /about/git
+- name: 博客
   link: /about/blog
+- name: 作者
+  link: /about/me

@@ -1,22 +1,18 @@
 ---
-layout: default
+layout: about
 title: 关于 GitHub Pages
 ---
 
 
-# GitHub Pages
-
+# {{ page.title }}
 官方简介：
-
 > GitHub Pages is a static site hosting service designed to host your personal, organization, or project pages directly from a GitHub repository.
 
 文档传送门：[GitHub Pages Basics][1]
 
 **个人总结：最省心的博客托管服务。**
 
-
 ## 一、简单步骤
-
 1. [注册账号][2]：比如 `<username>`。
 2. [创建仓库][3]：比如 `<username>.github.io` 或者 `<any repository name>`。
 3. 选择主题（非必要步骤）：`https://github.com/<username>/<username>.github.io/settings/pages/themes?select=cayman&source=master`。
@@ -36,7 +32,6 @@ title: 关于 GitHub Pages
 8. 站点源除常规 HTML 文件外，还支持 Jekyll 这个静态站点生成器。
 
 ## 三、Jekyll
-
 GitHub 介绍：[About GitHub Pages and Jekyll][4]。
 
 官方文档：[Jekyll][5]。
@@ -50,4 +45,4 @@ GitHub 介绍：[About GitHub Pages and Jekyll][4]。
 [3]:https://github.com/new
 [4]:https://help.github.com/en/articles/about-github-pages-and-jekyll
 [5]:https://jekyllrb.com
-[6]:https://mrzhqiang.github.io/about-jekyll
+[6]:/about/jekyll

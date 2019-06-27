@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: about
 title: 关于 Jekyll
 ---
 
 
-# Jekyll
-
+# {{ page.title }}
 官方简介：
-
 > Transform your plain text into static websites and blogs.
 
 文档传送门：[Jekyll][1]。
@@ -79,7 +77,6 @@ jekyll -v
 有关更多内容，请参考：[Jekyll on Windows][5]。
 
 ## 三、一步一步的教程
-
 参考：[一步一步的教程][8]。
 
 

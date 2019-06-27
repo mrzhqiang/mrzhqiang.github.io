@@ -16,11 +16,23 @@
     color: $primary-color
   }
 
-  p {
-    max-width: 26rem;
-    margin: 0 auto;
-    font-weight: bold;
-    font-size: 1.25rem;
-    font-family: 方正舒体, serif;
+  .header-title {
+      max-width: 36rem;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: $title-text-color;
+      font-family: 方正舒体, serif;
+
+      &:hover,
+      &:focus {
+        color: $title-link-color;
+      }
+  }
+
+  .header-date {
+    display: block;
+    margin-top: .5rem;
+    color: $date-text-color;
   }
 }

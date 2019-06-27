@@ -26,3 +26,17 @@
 .scroll-to-top i {
   font-weight: 800;
 }
+
+.header-icon {
+  display: inline-block;
+
+  i {
+    margin-bottom: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $primary-color-light;
+  }
+}

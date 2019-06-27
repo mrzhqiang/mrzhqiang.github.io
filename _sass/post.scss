@@ -3,20 +3,6 @@ body {
   background-color: $body-bg-color;
 }
 
-.post-header-icon {
-  display: inline-block;
-
-  i {
-    margin-bottom: 1rem;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: $primary-color-light;
-  }
-}
-
 .post-title,
 .post-title a {
   color: $title-text-color;
@@ -35,7 +21,6 @@ body {
 .post-date {
   display: block;
   margin-top: .5rem;
-  margin-bottom: -1.5rem;
   color: $date-text-color;
 }
 

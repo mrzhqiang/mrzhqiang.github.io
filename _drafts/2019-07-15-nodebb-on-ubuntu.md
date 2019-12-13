@@ -16,29 +16,31 @@ title: 搭建基于 NodeBB 的论坛
 # 搭建基于 NodeBB 的论坛
 网上有大批大批的论坛模板，为何偏偏选择 NodeBB 呢？
 
-主要还是喜欢它的可定制化，并且里面涉及 NodeJS 系列技术非常之多，足够我学习很长的一段时间。
+主要还是喜欢它的可定制化，并且里面涉及 Node.js 相关技术非常之多，足够我学习很长的一段时间。
 
 
 ## 1. 建立 sudo 权限账号
-使用 `useradd <username>` 命令创建用户，发现没有任何提示信息，于是使用 `userdel <username>` 命令删除后，改用 `adduser <username>` 创建新用户。
+考虑到大多数服务器都是刚搭建完毕，还没有带 sudo 权限的普通账号，所以简单介绍一下这部分知识。
+
+起初，我在 Linux 服务器中使用 `useradd <username>` 命令创建用户，发现没有任何提示信息，于是使用 `userdel <username>` 命令删除后，改用 `adduser <username>` 创建新用户。
 
 参考：[adduser 命令——菜鸟教程][1]。
 
-随后切换到 root 用户，在 `/etc/sudoers` 中的 `root    ALL=(ALL:ALL) ALL` 这一行下，添加：
+随后切换到 root 用户，在 `/etc/sudoers` 中的 `root    ALL=(ALL:ALL) ALL` 这一行之下，添加如下内容：
 ```text
 <username> ALL=(ALL:ALL) ALL
 ```
 
-再保存修改即可。
+添加完毕后，请保存此次修改的内容。
 
-如果没有写权限，请使用 `chmod u+w /etc/sudoers` 授予，完成后再使用 `chmod u-w /etc/sudoers` 撤销。
+如果没有写权限，请使用 `chmod u+w /etc/sudoers` 授予，保存后再使用 `chmod u-w /etc/sudoers` 撤销写权限。
 
 另外，一个比较好的做法是在 `/etc/sudoers.d` 目录下，添加 `<username>` 文件，随后写入：
 ```text
 <username> ALL=(ALL:ALL) ALL
 ```
 
-保存后切换到此账户即可拥有 `sudo` 权限，而不需要修改系统文件。
+做完以上操作，切换到此普通账户，此时便有了 `sudo` 权限。
 
 
 ## 2. 准备 NodeBB 运行环境

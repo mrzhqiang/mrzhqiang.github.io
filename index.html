@@ -3,19 +3,18 @@ layout: default
 title: mrzhqiang
 ---
 
-<!-- http://www.w3school.com.cn/tags/tag_main.asp -->
-<!-- <main> 将主要内容的位置告诉给屏幕阅读设备和辅助设备 -->
+<!-- <main> -- http://www.w3school.com.cn/tags/tag_main.asp -->
 <main class="home" role="main">
-  <!-- https://code.z01.com/v4/layout/overview.html -->
+  <!-- container -- https://code.z01.com/v4/layout/overview.html -->
   <div class="container">
     <!-- https://code.z01.com/v4/layout/grid.html -->
     <div class="row align-items-center">
-      <div class="col-6 mx-auto col-md-6 order-md-2">
+      <div class="home-image col-6 mx-auto col-md-6 order-md-2">
         {%
         include icons/mrzhqiang-web.svg width="512" height="512" class="img-fluid mb-3 mb-md-0"
         %}
       </div>
-      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+      <div class="home-content col-md-6 order-md-1 text-center text-md-left">
         <h1 class="mb-4">{{ page.title }}</h1>
         <p class="lead">
           这是小程序员的技术博客，用来记录对编程的爱与恨。

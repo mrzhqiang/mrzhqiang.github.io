@@ -5,7 +5,7 @@
   position: relative;
   // 1rem = 16px
   // https://www.html.cn/book/css/values/length/rem.htm
-  padding: 2rem 1.25rem;
+  padding-top: calc(25vh);
 
   h1 {
     font-size: 3rem;
@@ -23,20 +23,41 @@
   }
 }
 
-// TODO: 未来加入以下分辨率的适应
-
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
+  .home {
+    padding-top: calc(20vh);
+  }
+  .home-image {
+    display: none;
+  }
+  .home-content {
+    max-width: 100%;
+    flex: 0 0 75%;
+  }
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+  .home {
+    padding-top: calc(15vh);
+  }
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+  .home {
+    padding-top: calc(10vh);
+  }
+  .home-content {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .home {
+    padding-top: calc(5vh);
+  }
 }

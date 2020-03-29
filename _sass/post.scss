@@ -29,13 +29,14 @@ body {
 }
 
 .related {
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }
 
 .related-posts {
   padding-left: 0;
+  padding-top: 1rem;
   list-style: none;
 }
 
@@ -185,7 +186,7 @@ img {
     width: 100%;
     overflow: auto;
     word-break: normal;
-    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+    // For Firefox to horizontally scroll wider tables.
     -webkit-overflow-scrolling: touch;
 
     th {
@@ -195,6 +196,7 @@ img {
     th,
     td {
       padding: 0.5rem 1rem;
+      vertical-align: top;
       border: 1px solid $table-border-color;
     }
   }

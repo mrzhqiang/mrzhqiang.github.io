@@ -3,7 +3,8 @@ layout: post
 title: Java | java8 实战
 ---
 
-`java8` 是 `java` 的一个长期支持版本，也是当前开发者使用最多的一个版本，了解它，有助于代码质量，并向未来的 `java11` 和 `java17` 进军。
+`java8` 是 `java` 的一个长期支持版本，也是当前开发者使用最多的一个版本，了解它，有助于代码质量，并向未来的 `java11`
+和 `java17` 进军。
 
 <!--more-->
 
@@ -12,10 +13,14 @@ title: Java | java8 实战
 这里是对《Java 8 实战》的一个摘录。
 
 ## Java 8 与之前的版本有什么区别？
-`java8` 添加了一些新特性，比如 `Stream API`、`Lambda`、接口的默认方法、`Optional`、`CompletableFuture`、新的日期和时间 API 等等，其中最主要的是 `Stream API` 特性，基于它而引入了一种全新的编程思想——函数式编程。
+
+`java8` 添加了一些新特性，比如 `Stream API`、`Lambda`、接口的默认方法、`Optional`、`CompletableFuture`、新的日期和时间 API
+等等，其中最主要的是 `Stream API` 特性，基于它而引入了一种全新的编程思想——函数式编程。
 
 从 `java1.0` 时代开始，大家使用线程和锁，甚至是内存模型来进行并发编程，这需要掌握一定的专业知识，包括底层的相关逻辑。
-为了降低并发编程的难度，高效地利用系统的多内核，`java5` 添加了线程池和并发集合，`java7` 添加了分支/合并（fork/join）框架，它们都让并行计算变得更强大，但使用起来还是很费劲。所以 `java8` 提供了新的 `API`——`Stream` 流，它将数据当作一个流，然后可以对中间操作进行预定义，通过终端操作获得预期的结果。
+为了降低并发编程的难度，高效地利用系统的多内核，`java5` 添加了线程池和并发集合，`java7`
+添加了分支/合并（fork/join）框架，它们都让并行计算变得更强大，但使用起来还是很费劲。所以 `java8` 提供了新的 `API`——`Stream`
+流，它将数据当作一个流，然后可以对中间操作进行预定义，通过终端操作获得预期的结果。
 
 `Stream` 流实例可以由集合相关接口得到，也可以通过 `Stream` 流的工厂方法得到，在终端操作未被调用之前，预定义的任何中间操作都不会产生作用。
 
@@ -30,18 +35,22 @@ title: Java | java8 实战
 至于 `Optional` 以及新的日期和时间 `API`，使用它们会让你身心愉悦，甚至在阅读源代码之后，你的编程思想将得到升华。
 
 ## Synchronized 为什么在多内核 CPU 上的执行成本很高？
+
 多核 `CPU` 的每个处理器内核都有独立的高速缓存，加锁需要这些高速缓存同步运行，然而这又需要在内核间进行较慢的缓存一致性协议通信。
 
 ## 函数式编程的基础接口
+
 - `Consumer` - 消费者
 - `Function` - 函数
 - `Predicate` - 谓词
 - `Supplier` - 提供者
 
 ### Consumer
+
 官方 API 描述：
 
-> Represents an operation that accepts a single input argument and returns no result. Unlike most other functional interfaces, Consumer is expected to operate via side-effects.
+> Represents an operation that accepts a single input argument and returns no result. Unlike most other functional
+> interfaces, Consumer is expected to operate via side-effects.
 
 翻译：
 
@@ -50,14 +59,18 @@ title: Java | java8 实战
 核心代码：
 
 ```java
+
 @FunctionalInterface
 public interface Consumer<T> {
-    
+
     void accept(T t);
 
     default Consumer<T> andThen(Consumer<? super T> after) {
         Objects.requireNonNull(after);
-        return (T t) -> { accept(t); after.accept(t); };
+        return (T t) -> {
+            accept(t);
+            after.accept(t);
+        };
     }
 }
 ```
@@ -66,18 +79,19 @@ public interface Consumer<T> {
 
 **函数式接口通常只包含一个待实现的接口方法**，在这里是 `accept` 方法，它表示【接受】一个任意类型（泛型）的对象，无返回值。
 
-默认方法 `andThen`，表示先接受当前消费者，然后（`and` `then`）接受传入的 `after` 消费者。**它可以看作是简单的责任链设计模式。**
+默认方法 `andThen`，表示先接受当前消费者，然后（`and` `then`）接受传入的 `after` 消费者。**
+它可以看作是简单的责任链设计模式。**
 
 示例：
 
 ```java
 public class ConsumerDemo {
-public static void main(String[] args) {
-Optional.ofNullable(args)
-.filter(ConsumerDemo::isArrayNotEmpty)
-.map(ConsumerDemo::randomValueOfRange)
-.ifPresent(printConsumer().andThen(System.err::println));
-}
+    public static void main(String[] args) {
+        Optional.ofNullable(args)
+                .filter(ConsumerDemo::isArrayNotEmpty)
+                .map(ConsumerDemo::randomValueOfRange)
+                .ifPresent(printConsumer().andThen(System.err::println));
+    }
 
     private static boolean isArrayNotEmpty(String[] arrays) {
         return arrays != null && arrays.length > 0;
@@ -87,7 +101,7 @@ Optional.ofNullable(args)
         if (arrays == null || arrays.length == 0) {
             return "(empty)";
         }
-        return arrays[(int)(Math.random() * arrays.length)];
+        return arrays[(int) (Math.random() * arrays.length)];
     }
 
     private static Consumer<String> printConsumer() {
@@ -97,6 +111,7 @@ Optional.ofNullable(args)
 ```
 
 ### Function
+
 官方 API 描述：
 
 > Represents a function that accepts one argument and produces a result.
@@ -106,7 +121,9 @@ Optional.ofNullable(args)
 > 表示接受一个参数并产生结果的函数。
 
 核心代码：
+
 ```java
+
 @FunctionalInterface
 public interface Function<T, R> {
 
@@ -134,34 +151,37 @@ public interface Function<T, R> {
 
 静态方法 `identity` 表示【一致性】，它将应用的泛型对象直接返回，不进行任何处理。
 
-**`identity` 方法的典型应用场景是将 `Stream` 转为 `Map` 时，对 `key` 或 `value` 的转换需要传入一个 `Function` 接口，此时可以直接使用 `identity` 方法避免额外的 `Lambda` 表达式编码。**
+**`identity` 方法的典型应用场景是将 `Stream` 转为 `Map` 时，对 `key` 或 `value` 的转换需要传入一个 `Function`
+接口，此时可以直接使用 `identity` 方法避免额外的 `Lambda` 表达式编码。**
 
 示例：
 
 ```java
 public class IdentityDemo {
-public static void main(String[] args) {
-Map<String, String> maps = Stream.of("1", "3", "5", "7", "9")
-.collect(Collectors.toMap(Function.identity(), Function.identity()));
-System.out.println(maps);
-}
+    public static void main(String[] args) {
+        Map<String, String> maps = Stream.of("1", "3", "5", "7", "9")
+                .collect(Collectors.toMap(Function.identity(), Function.identity()));
+        System.out.println(maps);
+    }
 }
 ```
 
-默认方法 `compose` 表示【组合】前置 `Function` 函数，它首先调用前置函数的应用方法，将泛型对象 `V` 转为泛型对象 `T`，随后调用当前函数的应用方法，将泛型对象 `T` 转为泛型对象 `R`。
+默认方法 `compose` 表示【组合】前置 `Function` 函数，它首先调用前置函数的应用方法，将泛型对象 `V` 转为泛型对象 `T`
+，随后调用当前函数的应用方法，将泛型对象 `T` 转为泛型对象 `R`。
 
-**`compose` 方法的典型应用场景是存在一个特定函数，在输入参数不兼容的情况下，通过使用组合方法进行参数转换，让特定函数变成适应任何类型的通用函数。**
+**`compose`
+方法的典型应用场景是存在一个特定函数，在输入参数不兼容的情况下，通过使用组合方法进行参数转换，让特定函数变成适应任何类型的通用函数。**
 
 示例：
 
 ```java
 public class ComposeDemo {
-public static void main(String[] args) {
-List<Double> doubles = Stream.of("1", "3", "5", "7", "9")
-.map(halving().compose(Integer::parseInt))
-.collect(Collectors.toList());
-System.out.println(doubles);
-}
+    public static void main(String[] args) {
+        List<Double> doubles = Stream.of("1", "3", "5", "7", "9")
+                .map(halving().compose(Integer::parseInt))
+                .collect(Collectors.toList());
+        System.out.println(doubles);
+    }
 
     private static Function<Integer, Double> halving() {
         return it -> it / 2.0;
@@ -172,6 +192,7 @@ System.out.println(doubles);
 默认方法 `andThen` 与 `compose` 的行为相反，它先处理当前函数的输入参数，随后通过 `after` 函数返回预期类型的对象。
 
 ### Predicate
+
 官方 API 描述：
 
 > Represents a predicate (boolean-valued function) of one argument.
@@ -183,6 +204,7 @@ System.out.println(doubles);
 核心代码：
 
 ```java
+
 @FunctionalInterface
 public interface Predicate<T> {
 
@@ -214,7 +236,8 @@ public interface Predicate<T> {
 
 `test` 方法表示【评估】一个泛型对象，返回布尔值用于后续判断。
 
-静态方法 `isEqual` 表示操作对象【是否等于】目标引用对象，通常情况下使用 `Object.equals` 方法进行比较，也支持目标引用对象为 `null` 时的比较。
+静态方法 `isEqual` 表示操作对象【是否等于】目标引用对象，通常情况下使用 `Object.equals`
+方法进行比较，也支持目标引用对象为 `null` 时的比较。
 
 默认方法 `and` 表示【与】操作，通过短路逻辑与联系两个谓词，如果当前谓词返回 `false`，则不再评估传入的 `other` 谓词。
 
@@ -223,19 +246,21 @@ public interface Predicate<T> {
 默认方法 `or` 表示【或】操作，通过短路逻辑或联系两个谓词，如果当前谓词返回 `true`，则不再评估传入的 `other` 谓词。
 
 ### Supplier
+
 官方 API 描述：
 
 > Represents a supplier of results.
-There is no requirement that a new or distinct result be returned each time the supplier is invoked.
+> There is no requirement that a new or distinct result be returned each time the supplier is invoked.
 
 翻译：
 
 > 表示一个结果的提供者。
-不要求每次调用提供者都返回一个新的或不同的结果。
+> 不要求每次调用提供者都返回一个新的或不同的结果。
 
 核心代码：
 
 ```java
+
 @FunctionalInterface
 public interface Supplier<T> {
 
@@ -250,6 +275,7 @@ public interface Supplier<T> {
 提供者没有静态方法和默认方法。
 
 ### 行为参数化
+
 引用《Java 8 实战》2016 年 4 月第 1 版中，第二章开头的一段话：
 
 > 行为参数化就是可以帮助你处理频繁变更的需求的一种软件开发模式。
@@ -267,6 +293,7 @@ public interface Supplier<T> {
 ![行为参数化](/assets/images/java8-in-action/parameterization-of-behavior.png)
 
 ### Stream 流 API
+
 流，即先从源开始获取元素序列，接着描述一系列数据处理操作，最后通过内部迭代得到最终的结果。
 
 - 元素序列——类似集合，但不同的地方在于，集合讲究数据，流讲究计算
@@ -275,6 +302,7 @@ public interface Supplier<T> {
 - 内部迭代——流的迭代操作是在内部进行的，这有利于流的开发者进行不断优化，对于我们而言，只需要关注功能即可
 
 流的特性：
+
 - 流只能遍历一次
 - 流使用内部迭代
 - 流通过中间操作描述如何处理数据，但不对流元素产生作用
@@ -325,7 +353,8 @@ public interface Supplier<T> {
 
 **收集与归约：**
 > 你可能想知道，`Stream` 接口的 `collect` 和 `reduce` 方法有何不同，因为两种方法通常会获得相同的结果。
-> 以错误的语义使用 `reduce` 方法还会造成一个实际问题：这个归约过程不能并行工作，因为由多个线程并发修改同一个数据结构可能会破坏 `List` 本身。
+> 以错误的语义使用 `reduce`
+> 方法还会造成一个实际问题：这个归约过程不能并行工作，因为由多个线程并发修改同一个数据结构可能会破坏 `List` 本身。
 > 在这种情况下，如果你想要线程安全，就需要每次分配一个新的 `List`，而对象分配又会影响性能。
 > 这就是 `collect` 方法特别适合表达可变容器上的归约的原因，更关键的是它适合并行操作。
 
@@ -363,6 +392,9 @@ public interface Supplier<T> {
 |                     |                         | 使用示例：`Map<Boolean, List<Dish>> vegetarianDishes =  menuStream.collect(partitioningBy(Dish::isVegetarian));` |
 
 ### Stream API 的数值计算
-如果流中的元素为数值，比如 `int`、`long` 等基本数据类型，则应该使用 `IntStream` 流而非 `Stream<Integer>` 流，原因在于，`Stream<Integer>` 流在计算时，需要将 `Integer` 自动拆箱为 `int` 数值，等计算完毕后，又要自动装箱为 `Integer` 类。在流中的元素数量较多时，将导致性能急剧下降，且无法得知 `null` 值是代表空，还是 `0` 值，还是 `NaN` 值。
+
+如果流中的元素为数值，比如 `int`、`long` 等基本数据类型，则应该使用 `IntStream` 流而非 `Stream<Integer>`
+流，原因在于，`Stream<Integer>` 流在计算时，需要将 `Integer` 自动拆箱为 `int` 数值，等计算完毕后，又要自动装箱为 `Integer`
+类。在流中的元素数量较多时，将导致性能急剧下降，且无法得知 `null` 值是代表空，还是 `0` 值，还是 `NaN` 值。
 
 总之在遇到数值计算时，一定要转为对应类型的流，不仅可以增加性能，还可以获得更强大的计算函数，比如 `Max`、`Sum` 等等。

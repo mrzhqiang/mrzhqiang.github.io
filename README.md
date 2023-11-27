@@ -1,33 +1,38 @@
-# mrzhqiang 的个人博客
+mrzhqiang 的个人博客
+===================
 
-这是一枚小程序员的博客源码仓库。
+这是程序员博客的源码仓库，基于 Bootstrap4 框架构建，使用 Jekyll 工具渲染网页，托管在 GitHub Pages 服务上。
 
+---
 
 ## 在线浏览
 
 传送门：[mrzhqiang.github.io][1]。
 
-## 本地预览
-- 开发环境：[requirements][2]
+## 本地开发
+
+- 必备环境：[Jekyll Requirements][2]
+- 开发环境：
   - [Windows][3]
   - [macOS][4]
-  - [Ubuntu Linux][5]
-  - [Other Linux distros][6]
-  
-- 关于 `gem update`，需要以下依赖：
-  ```bash
-  sudo apt-get install ruby-dev
-  ```
+  - [Ubuntu][5]
+  - [Other Linux][6]
 
-- 替换国内 Gem 源（可选操作）：
+注意，对于 `gem update`，需要安装依赖：
 
-  ```bash
-  gem sources -add https://gems.ruby-china.com --remove https://rubygems.org/
-  
-  gem sources -l
-  ```
+```bash
+sudo apt-get install ruby-dev
+```
 
-- 运行本地服务器：
+为了加速下载依赖，可以替换国内 Gem 源（可选）：
+
+```bash
+gem sources -add https://gems.ruby-china.com --remove https://rubygems.org/
+
+gem sources -l
+```
+
+最后，运行本地服务器：
 
   ```bash
   $ bundle exec jekyll serve

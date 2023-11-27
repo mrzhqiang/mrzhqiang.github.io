@@ -4,12 +4,14 @@ title: 关于作者
 ---
 
 # {{ page.title }}
-半道入行，起步于移动端的 `Android` 开发，因公司业务调整，接手服务端的 `Java` 后台维护与开发。
+半道入行，始于移动端 `Android` 开发，历经两年半，转为服务端 `Java` 开发，至今（2023年）已六余年。
 
-身为后台兼具前端开发能力，从 `HTML CSS` 到 `Bootstrap`，从 `JavaScript` 到 `JQuery`，疯狂打怪升级。
+期间兼任前端，从 `HTML、CSS、JavaScript` 到 `JQuery、Bootstrap` 工具集，略有心得。
 
-后又接触 `Node.js`、`Vue.js`、`Angular.js`，利用开源的 `NodeBB` 项目搭建过一个游戏论坛。
+之后的工作中，又接触 `Node.js`、`Angular`、`Vue`，小有所成。
 
-喜欢玩游戏，目前正用 `Delphi 2007` 对 `AppleM2` 引擎进行重构，并打算使用 `Java Fx` 移植这个引擎。
+熟悉 `Spring` 全家桶，包括 `Spring Data、Spring Security、Spring MVC、Spring Boot、Spring Cloud` 系列技术。
 
-最近在学习 `Spring` 全家桶，想要成为一名合格的 `Java` 开发，便是：路漫漫其修远兮，吾将上下而求索。
+喜欢游戏，曾用 `Delphi 2007` 对 `AppleM2` 引擎客户端进行重构，并打算使用 `Java Fx + Spring` 移植这个引擎的服务端。
+
+热爱编程，无论今后职业发展如何，编程将是我一生的爱好。

@@ -1,7 +1,7 @@
 # 基本信息
 title: "斯是陋室"
 author: "mrzhqiang"
-description: > # this means to ignore newlines until "show_exerpts:"
+description: > # this means to ignore newlines until "permalink:"
   路漫漫其修远兮，吾将上下而求索。
 # 永久链接
 permalink: pretty

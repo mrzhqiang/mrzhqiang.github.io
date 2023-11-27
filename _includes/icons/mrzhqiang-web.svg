@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    {% if inlcude.width %}
-    width="{{ include.width }}"
-    {% endif %}
-    {% if include.height %}
-    height="{{ include.height }}"
-    {% endif %}
-    {% if include.class %}
-    class="{{ include.class }}"
-    {% endif %}
-    viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">  <image id="image0" width="512" height="512" x="0" y="0"
-    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        {% if inlcude.width %}
+        width="{{ include.width }}"
+        {% endif %}
+        {% if include.height %}
+        height="{{ include.height }}"
+        {% endif %}
+        {% if include.class %}
+        class="{{ include.class }}"
+        {% endif %}
+        viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<image id="image0" width="512" height="512" x="0" y="0"
+       href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
 B3RJTUUH4wYEExEixP/epgAAgABJREFUeNrt/XeMpOueH/Z9nze/lXPn7klnzjn3nLv3biJFWuKu
 GSCDMm1D1toyYUGETNkCBQgCZMs2SMEEKAgQbBFyoGASK4uUxBVNSqCFhUBTMsOK5O6S1N7dG06a
@@ -591,5 +592,5 @@ a4gCACGEELKGKAAQQggha4gCACGEELKGKAAQQggha4gCACGEELKGKAAQQggha4gCACGEELKGKAAQ
 Qggha4gCACGEELKGKAAQQgjEc4+4AAAATElEQVQha4gCACGEELKGKAAQQggha4gCACGEELKGKAAQ
 Qggha4gCACGEELKGKAAQQggha4gCACGEELKGKAAQQggha4gCACGEELKG/v8Ci/oqkpA7GQAAACV0
 RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wNi0wNFQxMToxNzozNCswODowMEFArc4AAAAldEVYdGRhdGU6
-bW9kaWZ5ADIwMTktMDYtMDRUMTE6MTc6MzQrMDg6MDAwHRVyAAAAAElFTkSuQmCC" />
-</svg>
+bW9kaWZ5ADIwMTktMDYtMDRUMTE6MTc6MzQrMDg6MDAwHRVyAAAAAElFTkSuQmCC"/>
+        </svg>
